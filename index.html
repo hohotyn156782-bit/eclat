@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ÉCLAT — магазин элитной парфюмерии. Оригинальные ароматы от ведущих мировых брендов.">
+    <meta property="og:title" content="ÉCLAT — Luxury Perfumery">
+    <meta property="og:description" content="Original fragrances from world-renowned brands. Find your signature scent.">
+    <meta property="og:type" content="website">
+    <title>ÉCLAT — Luxury Perfumery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <color-scheme content="only light">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header__inner">
+            <a href="#" class="logo">ÉCLAT</a>
+            <nav class="nav" id="nav">
+                <a href="#bestsellers" class="nav__link" data-i18n="nav_best">Бестселлеры</a>
+                <a href="#catalog" class="nav__link" data-i18n="nav_catalog">Каталог</a>
+                <a href="#pyramid" class="nav__link" data-i18n="nav_pyramid">Ноты</a>
+                <a href="#quiz" class="nav__link" data-i18n="nav_quiz">Подобрать</a>
+                <a href="#reviews" class="nav__link" data-i18n="nav_reviews">Отзывы</a>
+            </nav>
+            <div class="header__right">
+                <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
+                <button class="cart-btn" id="cartBtn" aria-label="Cart">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                    <span class="cart-btn__count" id="cartCount">0</span>
+                </button>
+                <button class="burger" id="burger" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <canvas class="hero__canvas" id="heroCanvas"></canvas>
+        <div class="hero__aurora">
+            <div class="hero__aurora-wave hero__aurora-wave--1"></div>
+            <div class="hero__aurora-wave hero__aurora-wave--2"></div>
+            <div class="hero__aurora-wave hero__aurora-wave--3"></div>
+        </div>
+        <div class="hero__mouse-glow" id="mouseGlow"></div>
+        <div class="container hero__inner">
+            <div class="hero__content">
+                <p class="hero__pre" data-i18n="hero_pre">Элитная парфюмерия</p>
+                <h1 class="hero__title">
+                    <span class="hero__title-line" data-i18n="hero_t1">Искусство</span>
+                    <span class="hero__title-line hero__title-line--accent" data-i18n="hero_t2">аромата</span>
+                </h1>
+                <div class="hero__line-reveal"></div>
+                <p class="hero__subtitle" data-i18n="hero_sub">Откройте мир изысканных ароматов от ведущих парфюмерных домов. Каждый флакон — произведение искусства.</p>
+                <div class="hero__actions">
+                    <a href="#catalog" class="btn btn--gold" data-i18n="hero_cta1">Смотреть каталог</a>
+                    <a href="#quiz" class="btn btn--outline" data-i18n="hero_cta2">Подобрать аромат</a>
+                </div>
+            </div>
+            <div class="hero__bottle">
+                <div class="hero__orbit hero__orbit--1"><div class="hero__orbit-dot"></div></div>
+                <div class="hero__orbit hero__orbit--2"><div class="hero__orbit-dot"></div></div>
+                <div class="hero__orbit hero__orbit--3"><div class="hero__orbit-dot"></div></div>
+                <div class="hero__bottle-glow"></div>
+                <div class="hero__bottle-shape">
+                    <div class="hero__bottle-cap"></div>
+                    <div class="hero__bottle-neck"></div>
+                    <div class="hero__bottle-body">
+                        <div class="hero__bottle-liquid"></div>
+                        <div class="hero__bottle-reflection"></div>
+                        <div class="hero__bottle-label">É</div>
+                    </div>
+                    <div class="hero__bottle-base"></div>
+                </div>
+                <div class="hero__bottle-shadow"></div>
+                <div class="hero__sparkles" id="heroSparkles"></div>
+            </div>
+        </div>
+        <div class="hero__scroll">
+            <span data-i18n="hero_scroll">Листайте вниз</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- BESTSELLERS -->
+    <section class="bestsellers" id="bestsellers">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label" data-i18n="best_label">Выбор покупателей</p>
+                <h2 class="section-title" data-i18n="best_title">Бестселлеры</h2>
+            </div>
+            <div class="bestsellers__grid">
+                <div class="product-card" data-price="12500" data-name-ru="Noir Absolu" data-name-en="Noir Absolu">
+                    <div class="product-card__badge" data-i18n="badge_hit">Хит</div>
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #1a1a2e; --clr2: #16213e;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>N</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Noir Absolu</h3>
+                        <p class="product-card__notes" data-i18n="best1_notes">Уд, амбра, ваниль</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">100 ml</span>
+                            <span class="product-card__type" data-i18n="type_unisex">Унисекс</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">12 500 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart" aria-label="Add to cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-price="9800" data-name-ru="Rose Dorée" data-name-en="Rose Dorée">
+                    <div class="product-card__badge badge--new" data-i18n="badge_new">Новинка</div>
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #8b2252; --clr2: #c9184a;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>R</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Rose Dorée</h3>
+                        <p class="product-card__notes" data-i18n="best2_notes">Роза, пион, мускус</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">50 ml</span>
+                            <span class="product-card__type" data-i18n="type_women">Женский</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">9 800 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-price="14200" data-name-ru="Oud Impérial" data-name-en="Oud Impérial">
+                    <div class="product-card__badge" data-i18n="badge_hit">Хит</div>
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #5c4033; --clr2: #8b6914;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>O</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Oud Impérial</h3>
+                        <p class="product-card__notes" data-i18n="best3_notes">Уд, шафран, сандал</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">100 ml</span>
+                            <span class="product-card__type" data-i18n="type_men">Мужской</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">14 200 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-price="11300" data-name-ru="Fleur Céleste" data-name-en="Fleur Céleste">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #4a148c; --clr2: #7b1fa2;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>F</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Fleur Céleste</h3>
+                        <p class="product-card__notes" data-i18n="best4_notes">Ирис, жасмин, ветивер</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">75 ml</span>
+                            <span class="product-card__type" data-i18n="type_unisex">Унисекс</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">11 300 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label" data-i18n="cat_label">Коллекции</p>
+                <h2 class="section-title" data-i18n="cat_title">Категории ароматов</h2>
+            </div>
+            <div class="categories__grid">
+                <a href="#catalog" class="category-card" data-filter="women">
+                    <div class="category-card__icon">&#9792;</div>
+                    <h3 data-i18n="cat_women">Для неё</h3>
+                    <p data-i18n="cat_women_desc">Утончённые цветочные и фруктовые композиции</p>
+                    <span class="category-card__count" data-i18n="cat_women_count">24 аромата</span>
+                </a>
+                <a href="#catalog" class="category-card" data-filter="men">
+                    <div class="category-card__icon">&#9794;</div>
+                    <h3 data-i18n="cat_men">Для него</h3>
+                    <p data-i18n="cat_men_desc">Древесные, пряные и кожаные аккорды</p>
+                    <span class="category-card__count" data-i18n="cat_men_count">18 ароматов</span>
+                </a>
+                <a href="#catalog" class="category-card" data-filter="unisex">
+                    <div class="category-card__icon">&#9954;</div>
+                    <h3 data-i18n="cat_unisex">Унисекс</h3>
+                    <p data-i18n="cat_unisex_desc">Универсальные ароматы без границ</p>
+                    <span class="category-card__count" data-i18n="cat_unisex_count">15 ароматов</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FRAGRANCE PYRAMID -->
+    <section class="pyramid" id="pyramid">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label" data-i18n="pyr_label">Анатомия аромата</p>
+                <h2 class="section-title" data-i18n="pyr_title">Пирамида нот</h2>
+                <p class="section-desc" data-i18n="pyr_desc">Каждый аромат раскрывается в три этапа, создавая уникальную историю на вашей коже</p>
+            </div>
+            <div class="pyramid__visual">
+                <div class="pyramid__level pyramid__level--top">
+                    <div class="pyramid__shape pyramid__shape--top"></div>
+                    <div class="pyramid__info">
+                        <h3 data-i18n="pyr_top">Верхние ноты</h3>
+                        <p class="pyramid__time" data-i18n="pyr_top_time">0 — 30 минут</p>
+                        <p class="pyramid__notes" data-i18n="pyr_top_notes">Цитрусовые, бергамот, лаванда, мята — первое впечатление, лёгкое и свежее</p>
+                    </div>
+                </div>
+                <div class="pyramid__level pyramid__level--mid">
+                    <div class="pyramid__shape pyramid__shape--mid"></div>
+                    <div class="pyramid__info">
+                        <h3 data-i18n="pyr_mid">Средние ноты</h3>
+                        <p class="pyramid__time" data-i18n="pyr_mid_time">30 мин — 4 часа</p>
+                        <p class="pyramid__notes" data-i18n="pyr_mid_notes">Роза, жасмин, корица, кардамон — сердце аромата, его характер</p>
+                    </div>
+                </div>
+                <div class="pyramid__level pyramid__level--base">
+                    <div class="pyramid__shape pyramid__shape--base"></div>
+                    <div class="pyramid__info">
+                        <h3 data-i18n="pyr_base">Базовые ноты</h3>
+                        <p class="pyramid__time" data-i18n="pyr_base_time">4 — 24 часа</p>
+                        <p class="pyramid__notes" data-i18n="pyr_base_notes">Сандал, мускус, амбра, ваниль — глубокий и стойкий шлейф</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="quiz" id="quiz">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label" data-i18n="quiz_label">Персональный подбор</p>
+                <h2 class="section-title" data-i18n="quiz_title">Подберём ваш идеальный аромат</h2>
+            </div>
+            <div class="quiz__box" id="quizBox">
+                <div class="quiz__step quiz__step--active" data-step="1">
+                    <p class="quiz__question" data-i18n="q1">Для кого ищете аромат?</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="women" data-i18n="q1_a1">Для неё</button>
+                        <button class="quiz__option" data-value="men" data-i18n="q1_a2">Для него</button>
+                        <button class="quiz__option" data-value="unisex" data-i18n="q1_a3">Универсальный</button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="2">
+                    <p class="quiz__question" data-i18n="q2">Какое настроение ближе?</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="fresh" data-i18n="q2_a1">Свежесть и лёгкость</button>
+                        <button class="quiz__option" data-value="warm" data-i18n="q2_a2">Тепло и уют</button>
+                        <button class="quiz__option" data-value="bold" data-i18n="q2_a3">Дерзость и страсть</button>
+                        <button class="quiz__option" data-value="elegant" data-i18n="q2_a4">Элегантность и класс</button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="3">
+                    <p class="quiz__question" data-i18n="q3">Предпочтительная стойкость?</p>
+                    <div class="quiz__options">
+                        <button class="quiz__option" data-value="light" data-i18n="q3_a1">Лёгкий (2-4 часа)</button>
+                        <button class="quiz__option" data-value="medium" data-i18n="q3_a2">Средний (4-8 часов)</button>
+                        <button class="quiz__option" data-value="heavy" data-i18n="q3_a3">Стойкий (8+ часов)</button>
+                    </div>
+                </div>
+                <div class="quiz__step" data-step="result">
+                    <div class="quiz__result" id="quizResult"></div>
+                </div>
+                <div class="quiz__progress">
+                    <div class="quiz__progress-bar" id="quizProgress"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label" data-i18n="cat2_label">Коллекция</p>
+                <h2 class="section-title" data-i18n="cat2_title">Полный каталог</h2>
+            </div>
+            <div class="catalog__filters">
+                <button class="catalog__filter active" data-filter="all" data-i18n="filter_all">Все</button>
+                <button class="catalog__filter" data-filter="women" data-i18n="filter_women">Женские</button>
+                <button class="catalog__filter" data-filter="men" data-i18n="filter_men">Мужские</button>
+                <button class="catalog__filter" data-filter="unisex" data-i18n="filter_unisex">Унисекс</button>
+            </div>
+            <div class="catalog__grid" id="catalogGrid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="women" data-price="9800" data-name-ru="Rose Dorée" data-name-en="Rose Dorée">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #8b2252; --clr2: #c9184a;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>R</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Rose Dorée</h3>
+                        <p class="product-card__notes" data-i18n="c1_notes">Роза, пион, мускус</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">50 ml</span>
+                            <span class="product-card__type" data-i18n="type_women">Женский</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">9 800 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div class="product-card" data-category="men" data-price="14200" data-name-ru="Oud Impérial" data-name-en="Oud Impérial">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #5c4033; --clr2: #8b6914;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>O</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Oud Impérial</h3>
+                        <p class="product-card__notes" data-i18n="c2_notes">Уд, шафран, сандал</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">100 ml</span>
+                            <span class="product-card__type" data-i18n="type_men">Мужской</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">14 200 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div class="product-card" data-category="unisex" data-price="12500" data-name-ru="Noir Absolu" data-name-en="Noir Absolu">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #1a1a2e; --clr2: #16213e;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>N</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Noir Absolu</h3>
+                        <p class="product-card__notes" data-i18n="c3_notes">Уд, амбра, ваниль</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">100 ml</span>
+                            <span class="product-card__type" data-i18n="type_unisex">Унисекс</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">12 500 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div class="product-card" data-category="women" data-price="8900" data-name-ru="Jardin Secret" data-name-en="Jardin Secret">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #2d6a4f; --clr2: #52b788;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>J</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Jardin Secret</h3>
+                        <p class="product-card__notes" data-i18n="c4_notes">Зелёный чай, магнолия, кедр</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">75 ml</span>
+                            <span class="product-card__type" data-i18n="type_women">Женский</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">8 900 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="product-card" data-category="men" data-price="10500" data-name-ru="Cuir Sauvage" data-name-en="Cuir Sauvage">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #3e2723; --clr2: #6d4c41;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>C</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Cuir Sauvage</h3>
+                        <p class="product-card__notes" data-i18n="c5_notes">Кожа, табак, бергамот</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">100 ml</span>
+                            <span class="product-card__type" data-i18n="type_men">Мужской</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">10 500 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div class="product-card" data-category="unisex" data-price="11300" data-name-ru="Fleur Céleste" data-name-en="Fleur Céleste">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #4a148c; --clr2: #7b1fa2;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>F</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Fleur Céleste</h3>
+                        <p class="product-card__notes" data-i18n="c6_notes">Ирис, жасмин, ветивер</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">75 ml</span>
+                            <span class="product-card__type" data-i18n="type_unisex">Унисекс</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">11 300 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 7 -->
+                <div class="product-card" data-category="women" data-price="7600" data-name-ru="Pétale de Lune" data-name-en="Pétale de Lune">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #5e548e; --clr2: #9f86c0;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>P</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Pétale de Lune</h3>
+                        <p class="product-card__notes" data-i18n="c7_notes">Лилия, фрезия, белый мускус</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">50 ml</span>
+                            <span class="product-card__type" data-i18n="type_women">Женский</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">7 600 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product 8 -->
+                <div class="product-card" data-category="men" data-price="13100" data-name-ru="Bois d'Encens" data-name-en="Bois d'Encens">
+                    <div class="product-card__img">
+                        <div class="product-card__bottle" style="--clr1: #1b4332; --clr2: #2d6a4f;">
+                            <div class="mini-bottle"><div class="mini-cap"></div><div class="mini-body"><span>B</span></div></div>
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <p class="product-card__brand">Maison ÉCLAT</p>
+                        <h3 class="product-card__name">Bois d'Encens</h3>
+                        <p class="product-card__notes" data-i18n="c8_notes">Ладан, кедр, пачули</p>
+                        <div class="product-card__meta">
+                            <span class="product-card__volume">100 ml</span>
+                            <span class="product-card__type" data-i18n="type_men">Мужской</span>
+                        </div>
+                        <div class="product-card__bottom">
+                            <span class="product-card__price">13 100 ₽</span>
+                            <button class="product-card__cart" data-i18n="btn_cart">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMO -->
+    <section class="promo" id="promo">
+        <div class="container">
+            <div class="promo__inner">
+                <div class="promo__content">
+                    <p class="promo__label" data-i18n="promo_label">Специальное предложение</p>
+                    <h2 class="promo__title" data-i18n="promo_title">Набор Discovery Set</h2>
+                    <p class="promo__desc" data-i18n="promo_desc">5 миниатюр по 10 ml в элегантной подарочной коробке. Попробуйте все наши бестселлеры, прежде чем выбрать свой.</p>
+                    <div class="promo__prices">
+                        <span class="promo__old">6 500 ₽</span>
+                        <span class="promo__new">3 900 ₽</span>
+                    </div>
+                    <a href="#order" class="btn btn--gold" data-i18n="promo_cta">Заказать со скидкой</a>
+                </div>
+                <div class="promo__visual">
+                    <div class="promo__bottles">
+                        <div class="promo__mini" style="--clr1: #1a1a2e; --clr2: #16213e; --delay: 0s;"><div class="mini-bottle sm"><div class="mini-cap"></div><div class="mini-body"><span>N</span></div></div></div>
+                        <div class="promo__mini" style="--clr1: #8b2252; --clr2: #c9184a; --delay: 0.1s;"><div class="mini-bottle sm"><div class="mini-cap"></div><div class="mini-body"><span>R</span></div></div></div>
+                        <div class="promo__mini" style="--clr1: #5c4033; --clr2: #8b6914; --delay: 0.2s;"><div class="mini-bottle sm"><div class="mini-cap"></div><div class="mini-body"><span>O</span></div></div></div>
+                        <div class="promo__mini" style="--clr1: #4a148c; --clr2: #7b1fa2; --delay: 0.3s;"><div class="mini-bottle sm"><div class="mini-cap"></div><div class="mini-body"><span>F</span></div></div></div>
+                        <div class="promo__mini" style="--clr1: #2d6a4f; --clr2: #52b788; --delay: 0.4s;"><div class="mini-bottle sm"><div class="mini-cap"></div><div class="mini-body"><span>J</span></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-head">
+                <p class="section-label" data-i18n="rev_label">Отзывы</p>
+                <h2 class="section-title" data-i18n="rev_title">Что говорят клиенты</h2>
+            </div>
+            <div class="reviews__grid">
+                <div class="review-card">
+                    <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-card__text" data-i18n="rev1_text">«Noir Absolu — это шедевр. Шлейф держится весь день, комплименты обеспечены. Флакон выглядит роскошно на полке.»</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">А</div>
+                        <div>
+                            <strong data-i18n="rev1_name">Александр В.</strong>
+                            <span>Noir Absolu</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-card__text" data-i18n="rev2_text">«Rose Dorée — мой идеальный аромат. Нежный, но стойкий. Заказываю уже третий флакон, не могу без него.»</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">Е</div>
+                        <div>
+                            <strong data-i18n="rev2_name">Елена К.</strong>
+                            <span>Rose Dorée</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-card">
+                    <div class="review-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="review-card__text" data-i18n="rev3_text">«Discovery Set — гениальная идея. Попробовал все пять, влюбился в Oud Impérial. Теперь это мой signature scent.»</p>
+                    <div class="review-card__author">
+                        <div class="review-card__avatar">М</div>
+                        <div>
+                            <strong data-i18n="rev3_name">Михаил Д.</strong>
+                            <span>Discovery Set</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER -->
+    <section class="order" id="order">
+        <div class="container">
+            <div class="order__inner">
+                <div class="order__content">
+                    <div class="section-head" style="text-align:left;">
+                        <p class="section-label" data-i18n="order_label">Быстрый заказ</p>
+                        <h2 class="section-title" style="text-align:left;" data-i18n="order_title">Оформить заказ</h2>
+                    </div>
+                    <p class="order__desc" data-i18n="order_desc">Оставьте заявку, и наш консультант свяжется с вами в течение 15 минут для подтверждения заказа.</p>
+                    <ul class="order__perks">
+                        <li data-i18n="order_p1">Бесплатная доставка от 5 000 ₽</li>
+                        <li data-i18n="order_p2">Подарочная упаковка в каждом заказе</li>
+                        <li data-i18n="order_p3">Возврат в течение 14 дней</li>
+                        <li data-i18n="order_p4">Пробники к каждому заказу</li>
+                    </ul>
+                </div>
+                <form class="order__form" id="orderForm">
+                    <div class="form-group">
+                        <label data-i18n="form_name">Ваше имя</label>
+                        <input type="text" name="name" required placeholder="Имя">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_phone">Телефон</label>
+                        <input type="tel" name="phone" required placeholder="+7 (999) 123-45-67">
+                    </div>
+                    <div class="form-group">
+                        <label data-i18n="form_comment">Комментарий</label>
+                        <textarea name="comment" rows="3" placeholder="Укажите аромат и количество"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn--gold btn--full" data-i18n="form_submit">Отправить заявку</button>
+                    <p class="order__note" data-i18n="form_note">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- CART MODAL -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-modal__overlay" id="cartOverlay"></div>
+        <div class="cart-modal__panel">
+            <div class="cart-modal__header">
+                <h3 data-i18n="cart_title">Корзина</h3>
+                <button class="cart-modal__close" id="cartClose" aria-label="Close">&times;</button>
+            </div>
+            <div class="cart-modal__body" id="cartBody">
+                <p class="cart-modal__empty" data-i18n="cart_empty">Корзина пуста</p>
+            </div>
+            <div class="cart-modal__footer" id="cartFooter" style="display:none;">
+                <div class="cart-modal__total">
+                    <span data-i18n="cart_total">Итого:</span>
+                    <strong id="cartTotal">0 ₽</strong>
+                </div>
+                <a href="#order" class="btn btn--gold btn--full" id="cartCheckout" data-i18n="cart_checkout">Оформить заказ</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer__inner">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a href="#" class="logo logo--footer">ÉCLAT</a>
+                    <p class="footer__tagline" data-i18n="footer_tagline">Элитная парфюмерия. Оригинальные ароматы от ведущих мировых брендов.</p>
+                </div>
+                <div class="footer__links">
+                    <h4 data-i18n="footer_nav">Навигация</h4>
+                    <a href="#bestsellers" data-i18n="nav_best">Бестселлеры</a>
+                    <a href="#catalog" data-i18n="nav_catalog">Каталог</a>
+                    <a href="#pyramid" data-i18n="nav_pyramid">Ноты</a>
+                    <a href="#quiz" data-i18n="nav_quiz">Подобрать</a>
+                </div>
+                <div class="footer__links">
+                    <h4 data-i18n="footer_contacts">Контакты</h4>
+                    <a href="mailto:hello@eclat-parfum.com">hello@eclat-parfum.com</a>
+                    <a href="tel:+78001234567">+7 (800) 123-45-67</a>
+                    <div class="footer__socials">
+                        <a href="#" class="footer__social" aria-label="Telegram">TG</a>
+                        <a href="#" class="footer__social" aria-label="Instagram">IG</a>
+                        <a href="#" class="footer__social" aria-label="WhatsApp">WA</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 ÉCLAT. <span data-i18n="footer_rights">Все права защищены.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor" id="cursor">
+        <div class="cursor__star">
+            <div class="cursor__ray cursor__ray--1"></div>
+            <div class="cursor__ray cursor__ray--2"></div>
+            <div class="cursor__dot"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
